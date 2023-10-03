@@ -62,8 +62,6 @@ function checkGame(){
     const secretWord = document.querySelector('.secret-word-container')
     const body = document.querySelectorAll('.hanger-body')
 
-    console.log(secretWord.innerText)
-    console.log(randomWord)
     if (body.length == wrongLetter.length){
         msg = "You lost"
     }
