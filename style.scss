@@ -1,3 +1,6 @@
+$primary-color: lavender;
+$secondary-color: #5d0d93d1;
+
 body {
     display: flex;
     flex-direction: column;
@@ -5,8 +8,8 @@ body {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    background-color: #222;
-    color: aliceblue;
+    background-color:$primary-color;
+    color: $secondary-color;
     font-family: "Roboto", sans-serif;
   }
   
@@ -18,7 +21,7 @@ body {
   
   .hanger {
     fill: transparent;
-    stroke: #fff;
+    stroke: $secondary-color;
     stroke-width: 4px;
     stroke-linecap: round;
   }
@@ -40,7 +43,7 @@ body {
   }
   
   .alert-repeated-word {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: $secondary-color;
     border-radius: 10px 10px 0 0;
     padding: 15px 20px;
     position: absolute;
@@ -62,19 +65,19 @@ body {
   
   .popup-container {
     background-color: rgba(0, 0, 0, 0.849);
+    color: #ffff;
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    /* display: flex; */
     display: none;
     align-items: center;
     justify-content: center;
   }
   
   .popup {
-    background: #2980b9;
+    background:$secondary-color;
     border-radius: 5px;
     box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -83,7 +86,8 @@ body {
   
   .popup button {
     cursor: pointer;
-    background-color: #fff;
+    background-color: $primary-color;
+    color: $secondary-color;
     border: 0;
     margin-top: 20px;
     padding: 12px 20px;

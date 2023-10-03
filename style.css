@@ -5,8 +5,8 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background-color: #222;
-  color: aliceblue;
+  background-color: lavender;
+  color: rgba(93, 13, 147, 0.8196078431);
   font-family: "Roboto", sans-serif;
 }
 
@@ -18,7 +18,7 @@ body {
 
 .hanger {
   fill: transparent;
-  stroke: #fff;
+  stroke: rgba(93, 13, 147, 0.8196078431);
   stroke-width: 4px;
   stroke-linecap: round;
 }
@@ -40,7 +40,7 @@ body {
 }
 
 .alert-repeated-word {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(93, 13, 147, 0.8196078431);
   border-radius: 10px 10px 0 0;
   padding: 15px 20px;
   position: absolute;
@@ -62,19 +62,19 @@ body {
 
 .popup-container {
   background-color: rgba(0, 0, 0, 0.849);
+  color: white;
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  /* display: flex; */
   display: none;
   align-items: center;
   justify-content: center;
 }
 
 .popup {
-  background: #2980b9;
+  background: rgba(93, 13, 147, 0.8196078431);
   border-radius: 5px;
   box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -83,7 +83,8 @@ body {
 
 .popup button {
   cursor: pointer;
-  background-color: #fff;
+  background-color: lavender;
+  color: rgba(93, 13, 147, 0.8196078431);
   border: 0;
   margin-top: 20px;
   padding: 12px 20px;

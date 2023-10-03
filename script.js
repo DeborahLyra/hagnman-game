@@ -2,8 +2,6 @@ const wordsList = ['abacaxi', 'morango', 'manga', 'banana', 'acerola' ]
 
 const randomWord = wordsList[Math.floor(Math.random() * wordsList.length)];
 let wordArray = randomWord.split("");
-let boxes = wordArray.map(letter => {return '_'});
-let lives = 6;
 let correctLetter = []
 let wrongLetter = []
 
@@ -19,7 +17,7 @@ document.addEventListener("keydown", (event) => {
     } else {
         if (wordArray.includes(letter) && !correctLetter.includes(letter)){
             correctLetter.push(letter)
-        } else {
+        } else if (!wordArray.includes(letter) && !correctLetter.includes(letter)){
             wrongLetter.push(letter)
         }
     }
@@ -32,7 +30,8 @@ document.addEventListener("keydown", (event) => {
 function playGame(){
     showWrongLetters()
     showCorrectLetters()
-    youWin()
+    checkGame()
+    showBody()
 }
 
 
@@ -56,9 +55,31 @@ function showCorrectLetters(){
     })
 }
 
-function youWin (){
-    if (correctLetter.length == wordArray.length){
-        alert(`You Won!`)
+function checkGame(){
+    let msg = ''
+    const secretWord = document.querySelector('.secret-word-container')
+    const body = document.querySelectorAll('.hanger-body')
+
+    console.log(secretWord.innerText)
+    console.log(randomWord)
+    if (body.length == wrongLetter.length){
+        msg = "You lost"
+    }
+
+    if (secretWord.innerText == randomWord){
+        msg = "You won"
+    }
+
+    if (msg) {
+        document.querySelector("#msg").innerHTML = msg;
+        document.querySelector(".popup-container").style.display = "flex";
+      }
+}
+
+function showBody(){
+    const body = document.querySelectorAll('.hanger-body')
+    for(let i = 0; i < wrongLetter.length;i++){
+        body[i].style.display="block"
     }
 }
 
@@ -75,37 +96,3 @@ function restartGame() {
         return true
     } else {return false} 
 }
-/*
-function checkCharacter(char){
-    let gotRight = false
-    for (let i = 0; i < wordArray.length; i++){
-        if(char == wordArray[i]){
-            if(char !== wordArray[i]){
-                corrects++
-            }
-            boxes[i] = char;
-            gotRight = true
-            console.log(boxes);
-        } else {
-            console.log('x')
-        }
-    }
-
-    if(!gotRight) {lives--}
-    console.log(lives)
-
-if (lives == 0){
-    console.log('perdeu')
-} else{
-    if (corrects == wordArray.length){
-        console.log('Vocë venceu')
-
-    } 
-
-}
-}  
-checkCharacter('a')
-checkCharacter('x')
-checkCharacter('r')
-checkCharacter('o')
-*/
