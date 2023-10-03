@@ -67,9 +67,8 @@ body {
     border-radius: 10px 10px 0 0;
     padding: 15px 20px;
     position: absolute;
-    top: 70%;
-    transition: 0.2s ease-in-out;
-    opacity: 0;
+    bottom: -55px;
+    transition:transform 0.2s ease-in-out;
   }
   
   .alert-repeated-word p {
@@ -77,8 +76,7 @@ body {
   }
   
   .alert-repeated-word.show {
-    opacity: 1;
-    // transform: translateY(-50px);
+   transform: translateY(-55px);
   }
   
   .secret-word-container span {
