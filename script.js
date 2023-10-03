@@ -84,7 +84,11 @@ function showBody(){
 }
 
 function repeatedLetter() {
-    console.log('já foi')
+    const repeated = document.querySelector('.alert-repeated-word')
+    repeated.classList.add("show")
+    setTimeout(()=>{
+        repeated.classList.remove("show")
+    }, 2000)
 }
 
 function restartGame() {

@@ -41,11 +41,13 @@ body {
 
 .alert-repeated-word {
   background-color: rgba(93, 13, 147, 0.8196078431);
+  color: lavender;
   border-radius: 10px 10px 0 0;
   padding: 15px 20px;
   position: absolute;
-  bottom: -55px;
+  top: 70%;
   transition: transform 0.3s ease-in-out;
+  opacity: 0;
 }
 
 .alert-repeated-word p {
@@ -53,7 +55,7 @@ body {
 }
 
 .alert-repeated-word.show {
-  transform: translateY(-50px);
+  opacity: 1;
 }
 
 .secret-word-container span {
