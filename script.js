@@ -6,6 +6,7 @@ let correctLetter = []
 let wrongLetter = []
 
 showCorrectLetters()
+incorrectGuesses()
 
 document.addEventListener("keydown", (event) => {
     const code = event.keyCode;
@@ -31,6 +32,7 @@ function playGame(){
     showWrongLetters()
     showCorrectLetters()
     checkGame()
+    incorrectGuesses()
     showBody()
 }
 
@@ -89,6 +91,21 @@ function repeatedLetter() {
     setTimeout(()=>{
         repeated.classList.remove("show")
     }, 2000)
+}
+
+
+function incorrectGuesses(){
+    const incorrectGuesses = document.querySelector('.incorrect-guesses')
+
+    if (wrongLetter.length > 2 &&  wrongLetter.length <= 4){
+        incorrectGuesses.style.color="orange"
+    } else if (wrongLetter.length > 4 ){
+        incorrectGuesses.style.color="red"
+    } else{
+        incorrectGuesses.style.color="green"
+    }
+    incorrectGuesses.innerHTML = `<span>${(wrongLetter.length)} / 6</span>  `
+    
 }
 
 function restartGame() {
