@@ -7,6 +7,7 @@ let wrongLetter = []
 
 showCorrectLetters()
 incorrectGuesses()
+lettersButton();
 
 document.addEventListener("keydown", (event) => {
     const code = event.keyCode;
@@ -115,3 +116,35 @@ function restartGame() {
         return true
     } else {return false} 
 }
+
+
+function lettersButton() {
+    const teclado = document.querySelector(".teclado");
+    for (let i = 65; i < 91; i++) {
+      let letter = String.fromCharCode(i);
+      teclado.innerHTML += `<button class="btn">${letter}</button>`;
+    }
+    const btn = document.querySelectorAll(".btn");
+    console.log(btn);
+  
+    btn.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const letter = btn.innerText.toLowerCase();
+  
+        if (wrongLetter.includes(letter)) {
+          repeatedLetter();
+        } else {
+          if (wordArray.includes(letter) && !correctLetter.includes(letter)) {
+            correctLetter.push(letter);
+            
+          } else if (
+            !wordArray.includes(letter) &&
+            !correctLetter.includes(letter)
+          ) {
+            wrongLetter.push(letter);
+          }
+        }
+        playGame();
+      });
+    });
+  }

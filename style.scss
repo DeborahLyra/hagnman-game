@@ -1,10 +1,10 @@
 $primary-color: lavender;
 $secondary-color: #5d0d93d1;
+
 *{
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
+
 body {
     display: flex;
     flex-direction: column;
@@ -15,7 +15,6 @@ body {
     background-color:$primary-color;
     color: $secondary-color;
     font-family: "Roboto", sans-serif;
-    padding: 5rem;
   }
 
   h1{
@@ -26,7 +25,7 @@ body {
     display: flex;
     justify-content: space-evenly;
     width: 100%;
-    padding: 4rem;
+
   }
   
   .hanger {
@@ -43,14 +42,22 @@ body {
   .incorrect-guesses{
     font-size: 1rem;
   }
+
+
+  .left-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
   
   .wrong-letter-container {
     font-size: 1rem;
-    margin-left: 5rem;
+    
   }
   
   .wrong-letter-container span {
-    margin: 0 2px;
+    margin: 0 ;
   }
   
 .wrong-letter{
@@ -59,6 +66,7 @@ body {
 
   .secret-word-container {
     font-size: 45px;
+    margin-top: 1rem;
   }
   
   .alert-repeated-word {
@@ -67,7 +75,7 @@ body {
     border-radius: 10px 10px 0 0;
     padding: 15px 20px;
     position: absolute;
-    bottom: -55px;
+    bottom: -100px;
     transition:transform 0.2s ease-in-out;
   }
   
@@ -76,7 +84,7 @@ body {
   }
   
   .alert-repeated-word.show {
-   transform: translateY(-55px);
+   transform: translateY(-110px);
   }
   
   .secret-word-container span {
@@ -114,3 +122,32 @@ body {
     font-size: 16px;
   }
   
+
+  .teclado{
+    margin-top: 5rem;
+    width: 200px;
+    flex-wrap: wrap;
+    text-align: center;
+    font-size: 0.8rem;
+  }
+
+  .btn{
+    padding: 2px 6px;
+    margin: 2px;
+    background-color: $secondary-color;
+    color:$primary-color;
+    border-radius: 3px;
+    border: 1px solid $secondary-color;
+    cursor: pointer;
+    line-height: 1rem;
+  }
+
+  .btn:hover{
+    background-color: $primary-color;
+    color:$secondary-color;
+    border: 1px solid $secondary-color;
+  }
+
+  .btn:focus{
+    outline: none;
+  }

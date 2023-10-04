@@ -1,6 +1,4 @@
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
@@ -14,7 +12,6 @@ body {
   background-color: lavender;
   color: rgba(93, 13, 147, 0.8196078431);
   font-family: "Roboto", sans-serif;
-  padding: 5rem;
 }
 
 h1 {
@@ -25,7 +22,6 @@ h1 {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
-  padding: 4rem;
 }
 
 .hanger {
@@ -43,13 +39,19 @@ h1 {
   font-size: 1rem;
 }
 
+.left-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .wrong-letter-container {
   font-size: 1rem;
-  margin-left: 5rem;
 }
 
 .wrong-letter-container span {
-  margin: 0 2px;
+  margin: 0;
 }
 
 .wrong-letter {
@@ -58,6 +60,7 @@ h1 {
 
 .secret-word-container {
   font-size: 45px;
+  margin-top: 1rem;
 }
 
 .alert-repeated-word {
@@ -66,7 +69,7 @@ h1 {
   border-radius: 10px 10px 0 0;
   padding: 15px 20px;
   position: absolute;
-  bottom: -55px;
+  bottom: -100px;
   transition: transform 0.2s ease-in-out;
 }
 
@@ -75,7 +78,7 @@ h1 {
 }
 
 .alert-repeated-word.show {
-  transform: translateY(-55px);
+  transform: translateY(-110px);
 }
 
 .secret-word-container span {
@@ -111,4 +114,33 @@ h1 {
   margin-top: 20px;
   padding: 12px 20px;
   font-size: 16px;
+}
+
+.teclado {
+  margin-top: 5rem;
+  width: 200px;
+  flex-wrap: wrap;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.btn {
+  padding: 2px 6px;
+  margin: 2px;
+  background-color: rgba(93, 13, 147, 0.8196078431);
+  color: lavender;
+  border-radius: 3px;
+  border: 1px solid rgba(93, 13, 147, 0.8196078431);
+  cursor: pointer;
+  line-height: 1rem;
+}
+
+.btn:hover {
+  background-color: lavender;
+  color: rgba(93, 13, 147, 0.8196078431);
+  border: 1px solid rgba(93, 13, 147, 0.8196078431);
+}
+
+.btn:focus {
+  outline: none;
 }/*# sourceMappingURL=style.css.map */
