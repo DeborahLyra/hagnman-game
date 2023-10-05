@@ -127,15 +127,15 @@ body {
 
   .teclado{
    margin: 2rem;
-    width: 200px;
+    width: 400px;
     flex-wrap: wrap;
     text-align: center;
-    font-size: 0.8rem;
+    font-size: 1rem;
     padding-top: 20px;
   }
 
   .btn{
-    padding: 2px 6px;
+    padding: 2px 18px;
     margin: 2px;
     background-color: $secondary-color;
     color:$primary-color;

@@ -123,15 +123,15 @@ h1 {
 
 .teclado {
   margin: 2rem;
-  width: 200px;
+  width: 400px;
   flex-wrap: wrap;
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 1rem;
   padding-top: 20px;
 }
 
 .btn {
-  padding: 2px 6px;
+  padding: 2px 18px;
   margin: 2px;
   background-color: rgba(93, 13, 147, 0.8196078431);
   color: lavender;
