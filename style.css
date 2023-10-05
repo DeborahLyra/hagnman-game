@@ -18,6 +18,11 @@ h1 {
   margin-bottom: 1rem;
 }
 
+.hint-text {
+  font-size: 1rem;
+  font-weight: bolder;
+}
+
 .game-container {
   display: flex;
   justify-content: space-evenly;
@@ -56,6 +61,8 @@ h1 {
 
 .wrong-letter {
   font-size: 1.5rem;
+  max-height: 2rem;
+  min-width: 100px;
 }
 
 .secret-word-container {
@@ -117,11 +124,12 @@ h1 {
 }
 
 .teclado {
-  margin-top: 5rem;
+  margin: 2rem;
   width: 200px;
   flex-wrap: wrap;
   text-align: center;
   font-size: 0.8rem;
+  padding-top: 20px;
 }
 
 .btn {
