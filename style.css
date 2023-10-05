@@ -52,17 +52,15 @@ h1 {
 }
 
 .wrong-letter-container {
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .wrong-letter-container span {
-  margin: 0;
+  margin-left: 3px;
 }
 
 .wrong-letter {
-  font-size: 1.5rem;
-  max-height: 2rem;
-  min-width: 100px;
+  height: 2rem;
 }
 
 .secret-word-container {

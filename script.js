@@ -16,7 +16,6 @@ async function startGame(){
     const hint = document.querySelector('.hint').innerHTML = `<p class= "hint-text">Hint: ${randomHint}</p>`
 }
 
-
 startGame().then (()=>{
     let wordArray = randomWord.split("");
     let correctLetter = [];
@@ -44,8 +43,6 @@ startGame().then (()=>{
             }
           }
           playGame();
-          //console.log(wrongLetter)
-          //console.log(correctLetter)
         }
       });
       
