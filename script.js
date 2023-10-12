@@ -8,10 +8,10 @@ async function getWordAndHint() {
 }
 
 async function startGame() {
-  const teste = await getWordAndHint()
-  randomWord = await teste.word.toLowerCase()
+  const resp = await getWordAndHint()
+  randomWord = await resp.word.toLowerCase()
   console.log(randomWord)
-  const randomHint = await teste.hint
+  const randomHint = await resp.hint
   const hint = document.querySelector('.hint').innerHTML = `<p class= "hint-text">Hint: ${randomHint}</p>`
 }
 
@@ -129,10 +129,10 @@ startGame().then(() => {
   }
 
   function lettersButton() {
-    const teclado = document.querySelector(".teclado");
+    const keyboard = document.querySelector(".keyboard");
     for (let i = 65; i < 91; i++) {
       let letter = String.fromCharCode(i);
-      teclado.innerHTML += `<button class="btn">${letter}</button>`;
+      keyboard.innerHTML += `<button class="btn">${letter}</button>`;
     }
     const btn = document.querySelectorAll(".btn");
 
